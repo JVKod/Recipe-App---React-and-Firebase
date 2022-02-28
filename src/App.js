@@ -1,5 +1,6 @@
 import './App.css';
-import Header from './components/Header.js';
+import Header from './components/Header';
+import { auth, db } from 'firebaseConfig';
 
 function App() {
   return (
