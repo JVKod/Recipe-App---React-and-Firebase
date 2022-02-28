@@ -1,3 +1,7 @@
-.AppContainer {
+.appContainer {
   margin-left: 10px;
+}
+
+.searchBar {
+  width: 50%;
 }

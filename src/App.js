@@ -1,9 +1,9 @@
+import logo from './logo.svg';
 import './App.css';
-import Header from './components/Header';
-import { auth, db, firebaseConfig } from './firebaseConfig';
-import SearchBar from './components/SearchBar';
+import { auth, db } from './firebaseConfig';
 import { useState, useEffect } from 'react';
 import { Recipe } from './components/recipe';
+import Header from './components/Header';
 
 function App() {
 
@@ -12,30 +12,10 @@ function App() {
   const [recipeIngredients, setRecipeIngredients] = useState([]);
   const [recipeAmounts, setRecipeAmounts] = useState([]);
   const [recipeList, setRecipeList] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
-  //useEffect(() => {
-    //test2();
-
-  //}, [recipeIDList]);
-
-  const testFunction = () => {
-    const query = db.collectionGroup("ingredients");
-    query.get().then(querySnapshot => { 
-      querySnapshot.forEach((doc) => {
-        console.log(doc.id, ' => ', doc.data());
-        });
-    });
-  }
-
-  const test2 = () => {
-    //for (let i = 0; i < recipeIDList.length; i++){
-      //db.collection("recipes").doc(recipeIDList[i]).get()
-    //}
-    console.log(recipeNames);
-  }
 
   const getRecipeNames = async () => {
-
     await db.collection("recipes").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) =>{
         setRecipeNames(recipeNames => [...recipeNames, doc.data().name]);
@@ -68,24 +48,30 @@ function App() {
           if (doc.id === 'amounts'){
             setRecipeAmounts(recipeAmounts => [...recipeAmounts, doc.data()]);
           }
-          /*for(let x = 0; x < doc.length; x++){
-
-            let item = doc.data().x
-            setRecipeIngredients(recipeIngredients => [...recipeIngredients, {}]);
-          }*/
-          
         });
       });
     } 
   }
 
   const createRecipeObjects = () => {
+    if (recipeList.length > 0){
+      console.log(recipeList);
+      return;
+    }
     for(let i = 0; i < 3; i++){
       let x = Recipe(recipeNames[i], recipeIngredients[i], recipeAmounts[i], recipeSteps[i]);
       setRecipeList(recipeList => [...recipeList, x]);
     }
-    console.log(recipeList);
+  console.log(recipeList);
+  }
 
+  const searchArray = (e) => {
+    let arrayx = [];
+    for(let i = 0; i < 3; i++){
+      arrayx.push(Object.values(recipeList[i].ingredients).filter(el => el.includes(searchTerm)));
+    }
+    console.log(arrayx);
+    e.preventDefault();
   }
 
   const outputToConsole = () => {
@@ -96,18 +82,26 @@ function App() {
   }
 
   return (
-    <div className='AppContainer'>
-      <Header>
-      </Header>
-      <SearchBar></SearchBar>
-      <>
-        <button onClick={getRecipeNames}>click</button>
-        <button onClick={outputToConsole}>console</button>
-        <button onClick={createRecipeObjects}>Create List</button>
-      </>
+    <>
+    <div className='appContainer'>
+      <Header></Header>
+      <button onClick={getRecipeNames}>retrieve data from database</button>
+      <button onClick={outputToConsole}>output to console</button>
+      <button onClick={createRecipeObjects}>Create Recipe List</button>
+      <form onSubmit={ e => {searchArray(e)}}>
+        <input
+          name="search"
+          type="text"
+          value={searchTerm}
+          onChange={ e => setSearchTerm(e.target.value)}
+          className="searchBar"
+        />
+        <input type="submit" value="search"></input>
+      </form>
     </div>
-    
-  );
+    </>
+
+  )
 }
 
 export default App;
