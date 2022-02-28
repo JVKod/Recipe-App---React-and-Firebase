@@ -1,5 +1,5 @@
-//!IMPORTANT!
-//install firebase using: npm install firebase
+// !IMPORTANT!
+// install firebase using: npm install firebase
 
 
 // Import the functions you need from the SDKs you need
@@ -28,4 +28,4 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 const auth = firebase.auth();
 
-export { auth, db };
+export { auth, db, firebaseConfig };

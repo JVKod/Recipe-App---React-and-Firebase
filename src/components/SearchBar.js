@@ -4,7 +4,11 @@ import './SearchBar.css';
 function SearchBar() {
     return (
       <div>
-        <input type='text'placeholder="Look for a recipe..."/>
+        <input 
+            type='text'
+            placeholder="Look for a recipe..."
+            className="searchBarStyle"    
+        />
       </div>
     );
 }
