@@ -5,3 +5,39 @@
 .searchBar {
   width: 50%;
 }
+
+.recipe {
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipeContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.recipeName {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  margin: 10px 0;
+}
+
+.fullRecipeBtn {
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border: solid 1px red;
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+}

@@ -81,6 +81,18 @@ function App() {
     console.log(recipeAmounts);
   }
 
+  // recipe component
+  const RecipeComponent = () => {
+    
+    return (
+      <div className='recipe'>
+        <span className='recipeName'>{recipeNames[0]}</span>
+        <span className='recipeName'>{recipeNames[1]}</span>
+        <span className='recipeName'>{recipeNames[2]}</span>
+      </div>
+    )
+  };
+
   return (
     <>
     <div className='appContainer'>
@@ -98,6 +110,7 @@ function App() {
         />
         <input type="submit" value="search"></input>
       </form>
+        <RecipeComponent></RecipeComponent>
     </div>
     </>
 
