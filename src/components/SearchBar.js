@@ -7,6 +7,6 @@ function SearchBar() {
         <input type='text'placeholder="Look for a recipe..."/>
       </div>
     );
-  }
+}
   
-  export default SearchBar;
+export default SearchBar;
