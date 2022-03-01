@@ -83,7 +83,7 @@ function App() {
       return;
     }
     for(let i = 0; i < recipeNames.length; i++){
-      let x = Recipe(recipeNames[i], recipeIngredients[i], recipeAmounts[i], recipeSteps[i], recipeTags[i]);
+      let x = Recipe(recipeNames[i], recipeIngredients[i], recipeAmounts[i], recipeSteps[i], recipeTags[i], );
       setRecipeList(recipeList => [...recipeList, x]);
     }
   }
@@ -120,18 +120,54 @@ function App() {
     console.log(recipeAmounts);
   }
 
-  // recipe component
+  //recipe component
   const RecipeComponent = () => {
     //check if a filteredList from searching exists
     if(!isFiltered){
       //this takes the name property from every object in the recipeList and returns them
-      return recipeList.map(({name}) => (<div key={name} className='recipe'><li key={name} className='recipeName'>{name}</li></div>));
+      return recipeList.map(({name, tags}) => (
+        <div key={name} className='recipe'>
+          <li key={name} className='recipeName'>
+            {name}
+          </li>
+          <li key={tags} className='tags'>
+            {tags}
+          </li> 
+          <div className='recipeCompBtnContainer'>
+            <button className="urlBtn">See Full Recipe</button>
+            <button className="urlBtn">Save to Favourites</button>
+            <button className="urlBtn">Share</button>
+          </div>
+        </div>)
+      );
     }
+
     else{
       //checks filteredList instead of RecipeList to exclude things not related to search
-      return filteredList.map(({name}) => (<div key={name} className='recipe'><li key={name} className='recipeName'>{name}</li></div>));
+      return filteredList.map(({name, tags}) => (
+        <div key={name} className='recipe'>
+          <li key={name} className='recipeName'>
+            {name}
+          </li>
+          <li key={tags} className='tags'>
+            {tags}
+          </li>
+          <div className='recipeCompBtnContainer'>
+            <button className="urlBtn">See Full Recipe</button>
+            <button className="urlBtn">Save to Favourites</button>
+            <button className="urlBtn">Share</button>
+          </div>
+        </div>)
+      );
     }
   };
+
+  //favourites box
+  const FavouritesComponent = () => {
+    return (
+      <div className='favouriteBox'>Favourite Recipes</div>
+    );
+  }
 
   //creates the filteredList array, called in searchArray()
   //if the arrayx argument is true, add from recipeList to filteredList
@@ -149,9 +185,12 @@ function App() {
     <>
     <div className='appContainer'>
       <Header></Header>
-      <button onClick={getRecipeNames}>retrieve data from database</button>
-      <button onClick={outputToConsole}>output to console</button>
-      <button onClick={createRecipeObjects}>Create Recipe List</button>
+      <div>
+        <button onClick={getRecipeNames}>retrieve data from database</button>
+        <button className='topBtns' onClick={outputToConsole}>output to console</button>
+        <button className='topBtns' onClick={createRecipeObjects}>Create Recipe List</button>
+        <button className='topBtns'>Sign Up for an Account</button>
+      </div>
       <form onSubmit={ e => {searchArray(e)}}>
         <input
           name="search"
@@ -160,11 +199,12 @@ function App() {
           onChange={ e => setSearchTerm(e.target.value)}
           className="searchBar"
         />
-        <input type="submit" value="search"></input>
+        <input className="searchBtn" type="submit" value="search"></input>
       </form>
-      <button onClick={() => {setIsFiltered(false)}}>reset search</button>
+      <button className="resetBtn" onClick={() => {setIsFiltered(false)}}>reset search</button>
 
         <RecipeComponent/>
+        <FavouritesComponent/>
     </div>
     </>
 
