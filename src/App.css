@@ -29,6 +29,8 @@
   font-weight: bold;
   color: black;
   margin: 10px 0;
+  list-style-type: none;
+  text-transform:capitalize;
 }
 
 .fullRecipeBtn {
