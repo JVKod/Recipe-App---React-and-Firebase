@@ -13,3 +13,7 @@
 *Open "Group 4 - INFO-5139 - Sprint Planning Meeting 01.xlsx" file to view Sprint Planning Meeting 01
 
 *3 tabs of information to view, Agenda, Current Sprint and Technology
+
+
+#Raemond 
+

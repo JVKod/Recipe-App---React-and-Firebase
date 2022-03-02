@@ -1,3 +1,4 @@
+/* styles from raemond */
 .App {
   text-align: center;
 }
@@ -35,4 +36,163 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/*///////////////////////////// END ///////////////////////////////////////////*/
+
+/* styles from willow and justin */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;400&display=swap');
+
+body {
+  background-color: #f5e4b8;
+}
+
+h1 {
+  font-family: Merriweather;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.appContainer {
+  margin-left: 10px;
+}
+
+.searchBar {
+  width: 50.5%;
+  margin-top: 5px;
+}
+
+.recipe {
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 100px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 2px rgba(180, 180, 180, 0.75);
+  background-color: #fff;
+}
+
+.recipeContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.recipeName {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  margin: 10px 0;
+  list-style-type: none;
+  text-transform: capitalize;
+  font-family: Merriweather;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.fullRecipeBtn {
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border: solid 1px red;
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.urlBtn {
+  border-radius: 20px;
+  width: 30%;
+  box-shadow: 1px 1px 5px 1px rgba(180, 180, 180, 0.75);
+  border: none;
+  background-color: #F5E4B8;
+  color: rgb(70, 70, 70);
+  font-weight: lighter;
+  margin-left: 10px;
+  margin-top: 10px; 
+  text-transform: lowercase;
+  font-style: italic;
+  font-family: Open Sans;
+}
+
+.urlBtn:hover {
+  background-color: #F2DEAA;
+}
+
+.tags {
+  margin-left: 20px;
+  letter-spacing: 2px;
+  color: rgb(70, 70, 70);
+  font-weight: lighter;
+  font-family: Open Sans;
+}
+
+.topBtns {
+  margin-left: 5px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  border: 1px solid rgb(180, 180, 180);
+  padding: 5px;
+  border-radius: 14px;
+  width: 200px;
+  text-transform: lowercase;
+  font-family: Open Sans;
+}
+
+.searchBtn {
+  margin-left: 5px;
+  background-color: #fff;
+  border: 1px solid rgb(180, 180, 180);
+  padding: 5px;
+  border-radius: 14px;
+  text-transform: lowercase;
+  font-family: Open Sans;
+  width: 80px;
+}
+
+.searchBar {
+  border: 1px solid rgb(180, 180, 180);
+  width: 494px;
+  border-radius: 10px;
+}
+
+.resetBtn {
+  margin-top: 5px;
+  background-color: #fff;
+  border: 1px solid rgb(180, 180, 180);
+  padding: 5px;
+  border-radius: 14px;
+  width: 120px;
+  font-family: Open Sans;
+}
+
+.recipeCompBtnContainer {
+  flex-direction: row;
+}
+
+.favouriteBox {
+  flex-direction: row;
+  box-shadow: 1px 1px 5px 2px rgba(180, 180, 180, 0.75);  width: 50%;
+  height: 100px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin: 10px 0;
+  list-style-type: none;
+  text-transform: capitalize;
+  font-family: Merriweather;
+  background-color: #fff;
+  line-height: 40px;
+  padding-left: 10px;
+  width: 30%;
 }
