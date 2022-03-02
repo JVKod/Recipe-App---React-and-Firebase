@@ -38,3 +38,11 @@ As a user I would like to favourite recipes so that I can find them quickly at a
 
 As a student, I want to be able to add items to a list, so I can use it for grocery shopping
 
+*Unzip sprint01.zip and add your own node modules folder to it
+*These are the dependencies needed,
+
+    "bootstrap": "^5.1.3",            npm install bootstrap
+    "firebase": "^9.6.7",             npm install firebase
+    "react-bootstrap": "^2.1.2",      npm install react-bootstrap
+    "react-firebase-hooks": "^5.0.3", npm install --save react-firebase-hooks
+    "react-router-dom": "^6.2.2",     npm install --save react-router-dom
