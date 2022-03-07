@@ -9,10 +9,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Login from "./components/Login"
 import Dashboard from "./components/Dashboard"
 import PrivateRoute from "./components/PrivateRoute"
-
 import { auth, db } from './firebaseConfig';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Recipe } from './components/recipe';
+import { Link, useNavigate } from "react-router-dom";
 
 
 function App() {
@@ -194,53 +194,56 @@ function App() {
   return (
     <>
       <div className='appContainer'>
-        <Header>
-         
-        </Header>
-        <div>
-          <button className='topBtns' onClick={getRecipeNames}>retrieve data from database</button>
-          <button className='topBtns' onClick={outputToConsole}>output to console</button>
-          <button className='topBtns' onClick={createRecipeObjects}>Create Recipe List</button>
-          <button className='topBtns'>Sign Up for an Account</button>
-        </div>
-        <form onSubmit={ e => {searchArray(e)}}>
-          <input
-            name="search"
-            type="text"
-            value={searchTerm}
-            onChange={ e => setSearchTerm(e.target.value)}
-            className="searchBar"
-          />
-          <input className="searchBtn" type="submit" value="search"></input>
-        </form>
-        <button className="resetBtn" onClick={() => {setIsFiltered(false)}}>reset search</button>
-        <RecipeComponent/>
-        <FavouritesComponent/>
-        <Container
-          className="d-flex align-items-center
-          justify-content-center" style={{ minHeight: "100vh" }}>
-
-          <div className="w-100" style={{ maxWidth: '400px' }}>
-            <Router>
-              <AuthProvider>
-                <Routes>
-
-                  <Route
-                    path="/"
-                    element={
-                      <PrivateRoute>
-                        <Dashboard />
-                      </PrivateRoute>
-                    }
-                  />
-                  
-                  <Route path="/signup" element={<Signup />} ></Route>
-                  <Route path="/login" element={<Login />} ></Route>
-                </Routes>
-              </AuthProvider>
-            </Router>
+        
+          <Header>
+          
+          </Header>
+          <div>
+            <button className='topBtns' onClick={getRecipeNames}>retrieve data from db</button>
+            <button className='topBtns' onClick={outputToConsole}>output to console</button>
+            <button className='topBtns' onClick={createRecipeObjects}>Show Recipes</button>
+            
+            
           </div>
-        </Container>
+          <form onSubmit={ e => {searchArray(e)}}>
+            <input
+              name="search"
+              type="text"
+              value={searchTerm}
+              onChange={ e => setSearchTerm(e.target.value)}
+              className="searchBar"
+            />
+            <input className="searchBtn" type="submit" value="search"></input>
+          </form>
+          <button className="resetBtn" onClick={() => {setIsFiltered(false)}}>reset search</button>
+          <RecipeComponent/>
+          <FavouritesComponent/>
+          <Container
+            className="d-flex align-items-center
+            justify-content-center" style={{ minHeight: "100vh" }}>
+
+            <div className="w-100" style={{ maxWidth: '400px' }}>
+              <Router>
+                <AuthProvider>
+                  <Routes>
+
+                    <Route
+                      path="/"
+                      element={
+                        <PrivateRoute>
+                          <Dashboard />
+                        </PrivateRoute>
+                      }
+                    />
+                    
+                    <Route path="/signup" element={<Signup />} ></Route>
+                    <Route path="/login" element={<Login />} ></Route>
+                  </Routes>
+                </AuthProvider>
+              </Router>
+            </div>
+          </Container>
+        
       </div>
     </>
   );
