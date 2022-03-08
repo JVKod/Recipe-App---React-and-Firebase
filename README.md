@@ -52,4 +52,10 @@ As a user I would like to favourite recipes so that I can find them quickly at a
 
 As a student, I want to be able to add items to a list, so I can use it for grocery shopping
 
+# Sprint Planning Meeting 02
+
+*Open "Group 4 - INFO-5139 - Sprint Planning Meeting 02.xlsx" file to view Sprint Planning Meeting 02
+
+*3 tabs of information to view, Agenda, Current Sprint and Technology
+
 
