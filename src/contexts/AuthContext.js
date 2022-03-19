@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3320db8017e085c590b63fe2a380cd77b1524f0b
 import React, { useContext, useEffect, useState } from 'react';
 import { auth } from '../firebaseConfig';
 
@@ -24,7 +27,11 @@ export function AuthProvider({ children }) {
         return auth.signOut()
     }
 
+<<<<<<< HEAD
     /* useEffect(() => {
+=======
+    useEffect(() => {
+>>>>>>> 3320db8017e085c590b63fe2a380cd77b1524f0b
         const unsubscribe = auth.onAuthStateChanged(user => {
             setCurrentUser(user);
             setLoading(false)
@@ -33,9 +40,12 @@ export function AuthProvider({ children }) {
         })
         return unsubscribe
     }, [])
+<<<<<<< HEAD
 
     */
    
+=======
+>>>>>>> 3320db8017e085c590b63fe2a380cd77b1524f0b
     const value = {
         currentUser,
         login,
