@@ -1,7 +1,10 @@
 //recipe component
 const RecipeDisplay = (props) => {
     //check if a filteredList from searching exists
+<<<<<<< HEAD
 
+=======
+>>>>>>> 00208cf914e848a6322136bf4592edba3f3e0997
     if(!props.isFiltered){
       //this takes the name property from every object in the recipeList and returns them
       return props.recipeList.map(({name, tags}) => (

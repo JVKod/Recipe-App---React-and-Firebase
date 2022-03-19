@@ -7,6 +7,7 @@ const RecipeList = async () =>{
     let ingredientArray = [];
     let amountArray = [];
     let tagArray = [];
+<<<<<<< HEAD
     let allergensArray = [];
     let caloriesPerServingArray = [];
     let costArray = [];
@@ -21,6 +22,12 @@ const RecipeList = async () =>{
     //////////////////retrieving data from database functions//////////////////////
 
     //names
+=======
+    let recipeListArray = [];
+    
+    //////////////////retrieving data from database functions//////////////////////
+
+>>>>>>> 00208cf914e848a6322136bf4592edba3f3e0997
     await db.collection("recipes").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) =>{
         nameArray = [...nameArray, doc.data().name.toLowerCase()];
@@ -28,7 +35,10 @@ const RecipeList = async () =>{
     });
     });
 
+<<<<<<< HEAD
     //steps
+=======
+>>>>>>> 00208cf914e848a6322136bf4592edba3f3e0997
     for(let i = 1; i < nameArray.length+1; i++){
         await db.collection("recipes").doc(i.toString()).collection("steps").get().then((querySnapshot) =>{
             querySnapshot.forEach((doc) => {
@@ -38,7 +48,10 @@ const RecipeList = async () =>{
         });
     }
 
+<<<<<<< HEAD
     //ingredients + amounts
+=======
+>>>>>>> 00208cf914e848a6322136bf4592edba3f3e0997
     for(let i = 1; i < nameArray.length+1; i++){
         await db.collection("recipes").doc(i.toString()).collection("ingredients").get().then((querySnapshot) =>{
             querySnapshot.forEach((doc) => {
@@ -53,7 +66,10 @@ const RecipeList = async () =>{
         });
     }
 
+<<<<<<< HEAD
     //tags
+=======
+>>>>>>> 00208cf914e848a6322136bf4592edba3f3e0997
     for(let i = 1; i < nameArray.length; i++){
         await db.collection("recipes").get().then((querySnapshot) =>{
             querySnapshot.forEach((doc) => {
@@ -63,6 +79,7 @@ const RecipeList = async () =>{
         });
     }
 
+<<<<<<< HEAD
     //allergens
     await db.collection("recipes").get().then((querySnapshot) => {
         querySnapshot.forEach((doc) =>{
@@ -135,11 +152,14 @@ const RecipeList = async () =>{
         });
         });
 
+=======
+>>>>>>> 00208cf914e848a6322136bf4592edba3f3e0997
 //////////////////ends//////////////////////
 
 //creates the master list of recipes
 
     for(let i = 0; i < nameArray.length; i++){
+<<<<<<< HEAD
     let x = Recipe(
         nameArray[i], 
         ingredientArray[i], 
@@ -156,6 +176,9 @@ const RecipeList = async () =>{
         veganArray[i],
         videoArray[i],
         );
+=======
+    let x = Recipe(nameArray[i], ingredientArray[i], amountArray[i], stepArray[i], tagArray[i], );
+>>>>>>> 00208cf914e848a6322136bf4592edba3f3e0997
     recipeListArray = [...recipeListArray, x];
     }
 

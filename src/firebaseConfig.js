@@ -6,8 +6,16 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
+<<<<<<< HEAD
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
 import { useEffect, useState } from "react";
+=======
+<<<<<<< HEAD
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
+import { useEffect, useState } from "react";
+=======
+>>>>>>> 3320db8017e085c590b63fe2a380cd77b1524f0b
+>>>>>>> 00208cf914e848a6322136bf4592edba3f3e0997
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -56,5 +64,10 @@ export function useAuth() {
   return currentUser;
 }
 =======
+<<<<<<< HEAD
 export { auth, db, firebaseConfig };
 >>>>>>> 17b793d3f9af89127fbdd99054c6c153c8fb5804
+=======
+export { auth, db };
+>>>>>>> 3320db8017e085c590b63fe2a380cd77b1524f0b
+>>>>>>> 00208cf914e848a6322136bf4592edba3f3e0997
