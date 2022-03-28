@@ -102,4 +102,8 @@ As a student, I want to be able to filter based on price so that I can find meal
 
 As a person with allergies, I want to be able to filter based on allergies so that I can confirm all the ingredients are safe for me
 
+# Sprint Planning Meeting 03
 
+*Open "Group 4 - INFO-5139 - Sprint Planning Meeting 03.xlsx" file to view Sprint Planning Meeting 03
+
+*3 tabs of information to view, Agenda, Current Sprint and Technology
