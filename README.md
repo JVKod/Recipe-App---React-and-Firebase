@@ -114,4 +114,4 @@ As a person with allergies, I want to be able to filter based on allergies so th
 
 *NOTE, user story (As a user I want the app to look more professional for a better user experience) has been added to Sprint 03
 
-*NOTE, user story (As a user, I would like to see the steps for each recipe so I know exactly how to make it from the app) has been added to Sprint 03
+*NOTE, user story (As a user, I would like to see the steps for each recipe so I know exactly how to make it from within the app) has been added to Sprint 03
