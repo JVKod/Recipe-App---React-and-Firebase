@@ -113,3 +113,5 @@ As a person with allergies, I want to be able to filter based on allergies so th
 *NOTE, user story (As a user, I would like to know the nearest store that has the ingredients I needed to complete the recipe I want to cook) has been CANCELLED for Sprint 03
 
 *NOTE, user story (As a user I want the app to look more professional for a better user experience) has been added to Sprint 03
+
+*NOTE, user story (As a user, I would like to see the steps for each recipe so I know exactly how to make it from the app) has been added to Sprint 03
