@@ -107,3 +107,9 @@ As a person with allergies, I want to be able to filter based on allergies so th
 *Open "Group 4 - INFO-5139 - Sprint Planning Meeting 03.xlsx" file to view Sprint Planning Meeting 03
 
 *3 tabs of information to view, Agenda, Current Sprint and Technology
+
+*NOTE, user story (As a user, I would like to search for ingredients so that I can view recipes that require that ingredient) has been added to the COMPLETE list in Sprint 02
+
+*NOTE, user story (As a user, I would like to know the nearest store that has the ingredients I needed to complete the recipe I want to cook) has been CANCELLED for Sprint 03
+
+*NOTE, user story (As a user I want the app to look more professional for a better user experience) has been added to Sprint 03
