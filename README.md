@@ -115,3 +115,21 @@ As a person with allergies, I want to be able to filter based on allergies so th
 *NOTE, user story (As a user I want the app to look more professional for a better user experience) has been added to Sprint 03
 
 *NOTE, user story (As a user, I would like to see the steps for each recipe so I know exactly how to make it from within the app) has been added to Sprint 03
+
+
+# Sprint 03
+
+*Watch video titled "recipe_App_Explained_Sprint_03" to see the completed user stories for Sprint 03
+
+*Unzip sprint03.zip, add your own node modules folder to it and open combined folder in VS CODE or similar IDE
+
+*These are the dependencies needed to be installed to the app,
+
+    "bootstrap": "^5.1.3",            npm install bootstrap
+    "firebase": "^9.6.7",             npm install firebase
+    "react-bootstrap": "^2.1.2",      npm install react-bootstrap
+    "react-firebase-hooks": "^5.0.3", npm install --save react-firebase-hooks
+    "react-router-dom": "^6.2.2",     npm install --save react-router-dom
+    "react-share": "^4.4.0",          npm install react-share
+    
+*Run npm start
