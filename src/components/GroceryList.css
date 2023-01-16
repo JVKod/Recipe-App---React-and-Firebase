@@ -1,0 +1,39 @@
+.addToListBtn {
+    border-radius: 10px;
+  width: 20%;
+  box-shadow: 1px 1px 5px 1px rgba(180, 180, 180, 0.75);
+  border: none;
+  background-color: #7c9acb;
+  color: rgb(70, 70, 70);
+  font-weight: lighter;
+  margin-left: 15px;
+  cursor: pointer;
+  margin-top: 5px;
+  background-color: #fff;
+  border: 1px solid rgb(180, 180, 180);
+  padding: 5px;
+  border-radius: 14px;
+  width: 250px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px;
+}
+
+.addToListBtn:hover {background-color: #e6ebe7}
+
+.addToListBtn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.xBtn {
+    border-radius: 5px;
+    margin-left: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+.inputBar {
+    border-radius: 5px;
+}
